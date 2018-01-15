@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="130"
+   height="120"
+   viewBox="0 0 130 120"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Spojovani_hran.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.3075057"
+     inkscape:cx="-7.3451668"
+     inkscape:cy="55.110374"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Vrstva 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-932.36227)">
+    <g
+       id="g4285">
+      <rect
+         y="937.36224"
+         x="5"
+         height="110"
+         width="120"
+         id="rect4140"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4273"
+         d="m 23.582726,949.4146 c 9.753585,-0.043 22.526875,0.0556 29.327236,5.44217 7.450494,6.75232 6.283403,13.96224 13.605419,20.25695 4.918225,3.74834 7.420363,5.06202 11.186678,7.25623"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4275"
+         d="m 22.978041,1033.3147 c 3.419022,-6.8865 6.567823,-13.7648 -3.023427,-20.257 -4.321166,-2.5442 -9.037476,-3.8573 -9.070279,-10.582 0.838923,-4.02033 1.102232,-8.23254 4.232797,-11.48899 9.157704,-6.26916 14.389725,0.0545 19.652272,7.55857"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4277"
+         d="m 80.574313,983.42815 c 10.200842,2.27573 14.323938,7.43039 16.931188,13.30308 2.614269,6.27097 -5.240223,13.50487 -7.860908,20.25697"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4279"
+         d="m 47.770137,1032.1053 c 4.633453,4.1345 8.480249,9.0557 18.140559,8.1633 4.652551,-0.8425 8.439183,-2.7983 10.27965,-7.2563"
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <circle
+         r="4.8077836"
+         cy="983.5459"
+         cx="78.329941"
+         id="path4281"
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#109e00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1" />
+      <circle
+         style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#109e00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1"
+         id="circle4283"
+         cx="87.853737"
+         cy="1019.3734"
+         r="4.8077836" />
+    </g>
+  </g>
+</svg>

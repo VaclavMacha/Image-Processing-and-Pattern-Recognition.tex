@@ -1,0 +1,70 @@
+%% Creator: Inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Funkce_sinc.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%%
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{424bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.19811321)%
+    \put(0.76707217,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $0$}}}%
+    \put(0.81990172,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $1$}}}%
+    \put(0.87273191,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $2$}}}%
+    \put(0.9255621,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $3$}}}%
+    \put(0.60858097,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $-3$}}}%
+    \put(0.66141052,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $-2$}}}%
+    \put(0.71424071,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $-1$}}}%
+    \put(0.75197777,0.17053621){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\footnotesize $1$}}}%
+    \put(0.22367591,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $0$}}}%
+    \put(0.32933568,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $0,5$}}}%
+    \put(0.43499675,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $1$}}}%
+    \put(0.01235413,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $-1$}}}%
+    \put(0.1180143,0.00540376){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\footnotesize $-0,5$}}}%
+    \put(0.21461936,0.18261173){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\footnotesize $1$}}}%
+    \put(0.21461936,0.11468732){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{\footnotesize $0,5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Funkce_sinc.pdf}}%
+    \put(0.49537474,0.09974384){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\overset{\mathcal{F}}{\Longrightarrow}$}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,185 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Style_book}[2017/03/09 Book template]
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Nastaveni textu a jazyku
+\usepackage[english,american,czech]{babel} 		% babel package pro jazyky
+\usepackage[varg]{txfonts}				% font New Roman pro text a Belleek pro matematiku (nesmi byt pouzit package 'esint')
+\usepackage{indentfirst}				% Odrazka i u prvniho odstavce kazde sekce
+\usepackage{xpatch}
+
+\clubpenalty=9500 						% completely avoid orphans (first lines of a new paragraph on the bottom of a page)
+\widowpenalty=9500 					% completely avoid widows (last lines of paragraph on a new page)
+\hyphenation{CDFA HARDI HiPPIES IKEM InterTrack MEGIDDO MIMD MPFA DICOM ASCLEPIOS MedInria}	% disable hyphenation of acronyms
+\xpatchcmd{\frontmatter}{\pagenumbering{roman}}{\pagenumbering{Roman}}{}{}	% nastaveni velkych rimskych cislic pro cislovani zacatku dokumentu 
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Nastaveni rozlozeni stranky
+\usepackage[a4paper]{geometry}
+\geometry{verbose, tmargin=4cm, bmargin=3cm, lmargin=3cm, rmargin=2cm, headheight=0.8cm, headsep=1cm, footskip=1cm}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Nastaveni barev
+\usepackage{color}
+\definecolor{doc_col}{RGB}{0, 101, 189} % barva dokumentu
+\definecolor{r}{RGB}{189,0,0}	
+\definecolor{g}{RGB}{0,189,0}
+\definecolor{b}{RGB}{0, 101, 189}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Hypertextove odkazy - nastaveni barev
+\usepackage[unicode=true, pdfusetitle, bookmarks=true, bookmarksnumbered=false, bookmarksopen=false, breaklinks=false, pdfborder={0 0 0}, pdfborderstyle={}, backref=false, colorlinks=true]{hyperref}
+\hypersetup{linkcolor=b, urlcolor=r, citecolor=g}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Vektory tucnym pismem misti sipky
+%% \renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Algoritmy
+\usepackage[boxed]{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{mathtools}
+
+% nastaveni velikosti fontu cisel radku pro algoritmy
+\algrenewcommand\alglinenumber[1]{\footnotesize #1:}
+
+% nastaveni nazvu seznamu algoritmu
+\renewcommand{\listalgorithmname}{Seznam algoritmů}
+
+% definice prikazu COMMENT
+ \algrenewcommand\algorithmiccomment[1]{\hfill\(\triangleright\) #1 \enspace}%
+
+% definice prikazu END
+\algrenewcommand\textproc{\textbf}
+\algrenewcommand{\algorithmicend}{{\color{doc_col}\textbf{end}}}
+
+% definice prikazu FUNCTION
+\newcommand\levelone[1]{\unskip $\left( \vcenter{\hbox{\shortstack{#1}}} \right)$\ignorespaces}
+\newcommand\leveltwo[2]{\unskip $\left( \vcenter{\hbox{\shortstack{#1,\; #2}}} \right)$\ignorespaces}
+
+\algrenewcommand{\algorithmicfunction}{{\color{doc_col}\textbf{function}}}
+\algdef{SE}[FUNCTION]{Function}{EndFunction}%
+   [3]{\algorithmicfunction\ \ifthenelse{\equal{#1}{}}{}{#1 =  }\textproc{#2}\ifthenelse{\equal{#3}{}}{}{\levelone{#3}}}%
+   {\algorithmicend}%
+\algnewcommand\CallFce[3]{\State\ifthenelse{\equal{#1}{}}{}{#1 =  }\textproc{#2}\ifthenelse{\equal{#3}{}}{}{\levelone{#3}} \Comment{volání funkce}}%
+\algnewcommand\Zeros[3]{\State{#1  =  }\textproc{zeros}\leveltwo{#2}{#3} \Comment{nulová matice}}%
+\algnewcommand\Eye[2]{\State{#1  =  }\textproc{eye}\levelone{#2} \Comment{jednotková matice}}%
+
+% definice prikazu FOR
+\algrenewcommand{\algorithmicfor}{{\color{doc_col}\textbf{for}}}
+\algdef{SE}[FOR]{For}{EndFor}[1]{\algorithmicfor\:{#1}}{\algorithmicend}%
+
+\algnewcommand{\algorithmicparfor}{{\color{doc_col}\textbf{parfor}}}
+\algdef{SE}[FOR]{ParFor}{EndFor}[1]{\algorithmicparfor\:{#1}}{\algorithmicend}%
+
+% definice prikazu IF
+\algrenewcommand{\algorithmicif}{{\color{doc_col}\textbf{if}}}
+\algrenewcommand{\algorithmicelse}{{\color{doc_col}\textbf{else}}}
+\algdef{SE}[IF]{If}{EndIf}[1]{\algorithmicif\:{#1}}{\algorithmicend}%
+
+% state with comment
+\algnewcommand\StateCom[2]{\State{#1}\ifthenelse{\equal{#1}{}}{}{\Comment{#2}}}%
+
+% special
+\algnewcommand\IndRow[1]{\State{#1}\Comment{indexy řádků}}%
+\algnewcommand\IndCol[1]{\State{#1}\Comment{indexy sloupců}}%
+\algnewcommand\IndRowCol[1]{\State{#1}\Comment{indexy řádků a sloupců}}%
+\algnewcommand\Subs[1]{\State{#1}\Comment{dosazení}}%
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Uprava popisku a krizovych odkazu pro obrazky, tabulky, atd. 
+\usepackage{prettyref}
+
+\renewcommand{\fnum@figure}{\textbf{Obr.~\thefigure}}
+\renewcommand{\fnum@table}{\textbf{Tab.~\thetable}}
+\renewcommand{\fnum@algorithm}{\textbf{Alg.~\thealgorithm}}
+
+\usepackage{caption}
+\captionsetup[table]{font={stretch=1.5}}
+\captionsetup[figure]{font={stretch=1.5}}
+\captionsetup[algorithm]{font={stretch=1.5}}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Definice vlastniho stylu kapitol
+\usepackage{titletoc}
+\usepackage{titlesec}
+\usepackage{sectsty}
+
+% barva sekci
+\allsectionsfont{\color{doc_col}}
+
+% styl stran zacatku kapitol 
+\assignpagestyle{\chapter}{chapter_page}
+\titleformat{\chapter}[display]
+  {\color{doc_col}\bfseries\Huge}
+  {\filleft\fontsize{2cm}{1cm}\selectfont\thechapter\hspace{0ex}}
+  {1ex}
+  {\vspace{0ex}}
+  [\vspace{0ex}{\titlerule[1pt]}]
+
+% styl stran zacatku casti
+\assignpagestyle{\part}{empty}
+\titleformat{\part}[display]
+   {\color{doc_col}\bfseries\Huge\filcenter}
+   {\partname{} \thepart}
+   {0em}
+   {\hrule}
+
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+%% Definice vlastniho stylu zahlavi a zapati 
+\usepackage{fancyhdr}
+
+% styl cislovani stran
+\newskip\linepagesep \linepagesep 10pt\relax
+\def\vfootline{\begingroup\color{doc_col}\rule[-990pt]{2pt}{1000pt}\endgroup}
+
+% styl stran fancy
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\  #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+  \renewcommand{\footrulewidth}{0pt}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{doc_col}\leaders\hrule height \headrulewidth\hfill}}
+  \fancyhf{}
+  \fancyhead[RO]{\color{doc_col}\textbf{\nouppercase{\leftmark}}}
+  \fancyhead[LE]{\color{doc_col}\textbf{\nouppercase{\rightmark}}}
+  \fancyfoot[RO]{\color{doc_col}\vfootline\hskip\linepagesep\textbf{\thepage}}
+  \fancyfoot[LE]{\color{doc_col}\textbf{\thepage}\hskip\linepagesep\vfootline}
+
+% styl stran plain
+\fancypagestyle{plain}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[RO]{\color{doc_col}\vfootline\hskip\linepagesep\textbf{\thepage}}
+  \fancyfoot[LE]{\color{doc_col}\textbf{\thepage}\hskip\linepagesep\vfootline}
+}
+
+% styl stran zacatku kapitol
+\fancypagestyle{chapter_page}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhf{}
+  \fancyfoot[RO]{\color{doc_col}\vfootline\hskip\linepagesep\textbf{\thepage}}
+  \fancyfoot[LE]{\color{doc_col}\textbf{\thepage}\hskip\linepagesep\vfootline}
+}
+
+% styl prazdnych stran pred zacatkem kapitol
+\makeatletter
+  \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+%%  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- %%
+\endinput
